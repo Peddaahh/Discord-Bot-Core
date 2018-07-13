@@ -20,10 +20,5 @@ namespace DiscordBotCore.Storage.Implementations
 
             return (T) _dictionary[key];
         }
-
-        public void Hello()
-        {
-            Console.WriteLine("Hi!");
-        }
     }
 }
