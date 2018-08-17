@@ -17,14 +17,14 @@ namespace DiscordBotCore.Discord
             _client = client;
         }
 
-        internal async Task ConnectAsync(TutorialBotConfig config)
+        public async Task ConnectAsync(TutorialBotConfig config)
         {
             _client.Log += _logger.Log;
 
             await _client.LoginAsync(TokenType.Bot, config.Token);
             await _client.StartAsync();
 
-            await Task.Delay(-1);
+            await Task.Delay(1000);
         }
     }
 }
